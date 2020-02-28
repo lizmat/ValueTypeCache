@@ -9,8 +9,8 @@ SYNOPSIS
     use ValueTypeCache;
 
     sub id(%h --> Str:D) {
-        %h<x> // 0;
-        %h<y> // 0;
+        %h<x> //= 0;
+        %h<y> //= 0;
         "%h<x>,%h<y>"
     }
 

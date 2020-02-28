@@ -1,6 +1,6 @@
 use v6.c;
 
-role ValueTypeCache:ver<0.0.1>:auth<cpan:ELIZABETH>[&args2str] {
+role ValueTypeCache:ver<0.0.2>:auth<cpan:ELIZABETH>[&args2str] {
     has $!WHICH;
 
     my %cache;
@@ -30,8 +30,8 @@ ValueTypeCache - A role to cache Value Type classes
   use ValueTypeCache;
 
   sub id(%h --> Str:D) {
-      %h<x> // 0;
-      %h<y> // 0;
+      %h<x> //= 0;
+      %h<y> //= 0;
       "%h<x>,%h<y>"
   }
 

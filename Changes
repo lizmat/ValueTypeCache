@@ -2,5 +2,8 @@ Revision history for ValueTypeCache
 
 {{$NEXT}}
 
+0.0.2  2020-02-28T13:57:24+01:00
+    - Fix typo in example
+
 0.0.1  2020-02-28T13:55:31+01:00
     - Initial version
