@@ -7,10 +7,10 @@
   "depends" : [ ],
   "description" : "A role to cache Value Type classes",
   "license" : "Artistic-2.0",
-  "name" : "ValueType",
+  "name" : "ValueTypeCache",
   "perl" : "6.c",
   "provides" : {
-    "ValueType" : "lib/ValueTypeCache.pm6"
+    "ValueTypeCache" : "lib/ValueTypeCache.pm6"
   },
   "resources" : [ ],
   "source-url" : "https://github.com/lizmat/ValueTypeCache.git",
