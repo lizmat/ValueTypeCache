@@ -2,6 +2,9 @@ Revision history for ValueTypeCache
 
 {{$NEXT}}
 
+0.0.3  2020-03-04T14:35:14+01:00
+    - The prefix of the WHICH should handle subclasses correctly
+
 0.0.2  2020-02-28T13:57:24+01:00
     - Fix typo in example
 
