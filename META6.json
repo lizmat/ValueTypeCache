@@ -1,22 +1,26 @@
 {
-  "auth" : "cpan:ELIZABETH",
-  "authors" : [
+  "auth": "cpan:ELIZABETH",
+  "authors": [
     "Elizabeth Mattijsen"
   ],
-  "build-depends" : [ ],
-  "depends" : [ ],
-  "description" : "A role to cache Value Type classes",
-  "license" : "Artistic-2.0",
-  "name" : "ValueTypeCache",
-  "perl" : "6.c",
-  "provides" : {
-    "ValueTypeCache" : "lib/ValueTypeCache.pm6"
+  "build-depends": [
+  ],
+  "depends": [
+  ],
+  "description": "A role to cache Value Type classes",
+  "license": "Artistic-2.0",
+  "name": "ValueTypeCache",
+  "perl": "6.c",
+  "provides": {
+    "ValueTypeCache": "lib/ValueTypeCache.pm6"
   },
-  "resources" : [ ],
-  "source-url" : "https://github.com/lizmat/ValueTypeCache.git",
-  "tags" : [
+  "resources": [
+  ],
+  "source-url": "https://github.com/lizmat/ValueTypeCache.git",
+  "tags": [
     "UTILS"
   ],
-  "test-depends" : [ ],
-  "version" : "0.0.3"
+  "test-depends": [
+  ],
+  "version": "0.0.4"
 }

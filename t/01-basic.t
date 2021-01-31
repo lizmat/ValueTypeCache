@@ -1,4 +1,4 @@
-use v6.c;
+use v6.*;
 use Test;
 use ValueTypeCache;
 
@@ -23,4 +23,4 @@ my $bag = bag (^1000).map: {
 
 ok $bag.elems < 1000, 'should be fewer than 1000 different points';
 
-# vim: ft=perl6 expandtab sw=4
+# vim: expandtab shiftwidth=4

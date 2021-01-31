@@ -1,19 +1,32 @@
-use v6.c;
+use v6.d;
 
-role ValueTypeCache:ver<0.0.3>:auth<cpan:ELIZABETH>[&args2str] {
+# Using nqp for optimal performance
+use nqp;
+
+role ValueTypeCache:ver<0.0.4>:auth<cpan:ELIZABETH>[&args2str] {
     has $!WHICH;
 
-    my %cache;
-    my $lock := Lock.new;
+    my $cache     := nqp::hash;
+    my $lock      := Lock.new;
+    my str $prefix = nqp::concat(::?CLASS.^name,'|');
 
-    method !SET-WHICH($!WHICH) { self }
+    method !SET-WHICH(\WHICH) {
+        $!WHICH := nqp::box_s(WHICH,ValueObjAt);
+        self
+    }
     multi method WHICH(::?CLASS:D:) { $!WHICH }
 
     method bless(*%_) {
-        my $WHICH := self.^name ~ '|' ~ args2str(%_);
+        my str $WHICH = nqp::concat($prefix,args2str(%_));
         $lock.protect: {
-            %cache{$WHICH} //= 
-              self.Mu::bless(|%_)!SET-WHICH(ValueObjAt.new($WHICH))
+            nqp::ifnull(
+              nqp::atkey($cache,$WHICH),
+              nqp::bindkey(
+                $cache,
+                $WHICH,
+                self.Mu::bless(|%_)!SET-WHICH($WHICH)
+              )
+            )
         }
     }
 }
@@ -82,11 +95,11 @@ and Pull Requests are welcome.
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright 2020 Elizabeth Mattijsen
+Copyright 2020,2021 Elizabeth Mattijsen
 
 This library is free software; you can redistribute it and/or modify it under
 the Artistic License 2.0.
 
 =end pod
 
-# vim: ft=perl6 expandtab sw=4
+# vim: expandtab shiftwidth=4
