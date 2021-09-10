@@ -1,3 +1,5 @@
+[![Actions Status](https://github.com/lizmat/ValueTypeCache/workflows/test/badge.svg)](https://github.com/lizmat/ValueTypeCache/actions)
+
 NAME
 ====
 
@@ -43,14 +45,14 @@ The format of the value that is being returned by `WHICH` is only valid during a
 AUTHOR
 ======
 
-Elizabeth Mattijsen <liz@wenzperl.nl>
+Elizabeth Mattijsen <liz@raku.rocks>
 
 Source can be located at: https://github.com/lizmat/ValueTypeCache . Comments and Pull Requests are welcome.
 
 COPYRIGHT AND LICENSE
 =====================
 
-Copyright 2020,2021 Elizabeth Mattijsen
+Copyright 2020, 2021 Elizabeth Mattijsen
 
 This library is free software; you can redistribute it and/or modify it under the Artistic License 2.0.
 

@@ -2,6 +2,11 @@ Revision history for ValueTypeCache
 
 {{$NEXT}}
 
+0.0.5  2021-09-10T11:50:44+02:00
+    - Change file extension to .rakumod
+    - Migrate to zef ecosystem
+    - Update email address
+
 0.0.4  2021-01-31T11:48:14+01:00
     - Make caching overhead about 30% faster by using NQP
     - Upped Raku version to 6.d

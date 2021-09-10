@@ -3,7 +3,7 @@ use v6.d;
 # Using nqp for optimal performance
 use nqp;
 
-role ValueTypeCache:ver<0.0.4>:auth<cpan:ELIZABETH>[&args2str] {
+role ValueTypeCache:ver<0.0.5>:auth<zef:lizmat>[&args2str] {
     has $!WHICH;
 
     my $cache     := nqp::hash;
@@ -88,14 +88,14 @@ medium.
 
 =head1 AUTHOR
 
-Elizabeth Mattijsen <liz@wenzperl.nl>
+Elizabeth Mattijsen <liz@raku.rocks>
 
 Source can be located at: https://github.com/lizmat/ValueTypeCache . Comments
 and Pull Requests are welcome.
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright 2020,2021 Elizabeth Mattijsen
+Copyright 2020, 2021 Elizabeth Mattijsen
 
 This library is free software; you can redistribute it and/or modify it under
 the Artistic License 2.0.
