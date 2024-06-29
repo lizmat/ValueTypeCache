@@ -3,7 +3,7 @@ use v6.d;
 # Using nqp for optimal performance
 use nqp;
 
-role ValueTypeCache:ver<0.0.5>:auth<zef:lizmat>[&args2str] {
+role ValueTypeCache[&args2str] {
     has $!WHICH;
 
     my $cache     := nqp::hash;
@@ -39,26 +39,30 @@ ValueTypeCache - A role to cache Value Type classes
 
 =head1 SYNOPSIS
 
-  use ValueTypeCache;
+=begin code :lang<raku>
 
-  sub id(%h --> Str:D) {
-      %h<x> //= 0;
-      %h<y> //= 0;
-      "%h<x>,%h<y>"
-  }
+use ValueTypeCache;
 
-  class Point does ValueTypeCache[&id] {
-      has $.x;
-      has $.y;
-  }
+sub id(%h --> Str:D) {
+    %h<x> //= 0;
+    %h<y> //= 0;
+    "%h<x>,%h<y>"
+}
 
-  say Point.new.WHICH;  # Point|0,0
+class Point does ValueTypeCache[&id] {
+    has $.x;
+    has $.y;
+}
 
-  # fill a bag with random Points
-  my $bag = bag (^1000).map: {
-    Point.new: x => (-10..10).roll, y => (-10..10).roll
-  }
-  say $bag.elems;  # less than 1000
+say Point.new.WHICH;  # Point|0,0
+
+# fill a bag with random Points
+my $bag = bag (^1000).map: {
+  Point.new: x => (-10..10).roll, y => (-10..10).roll
+}
+say $bag.elems;  # less than 1000
+
+=end code
 
 =head1 DESCRIPTION
 
@@ -93,9 +97,13 @@ Elizabeth Mattijsen <liz@raku.rocks>
 Source can be located at: https://github.com/lizmat/ValueTypeCache . Comments
 and Pull Requests are welcome.
 
+If you like this module, or what I’m doing more generally, committing to a
+L<small sponsorship|https://github.com/sponsors/lizmat/>  would mean a great
+deal to me!
+
 =head1 COPYRIGHT AND LICENSE
 
-Copyright 2020, 2021 Elizabeth Mattijsen
+Copyright 2020, 2021, 2024 Elizabeth Mattijsen
 
 This library is free software; you can redistribute it and/or modify it under
 the Artistic License 2.0.

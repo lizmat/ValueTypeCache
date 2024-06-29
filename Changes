@@ -2,6 +2,13 @@ Revision history for ValueTypeCache
 
 {{$NEXT}}
 
+0.0.6  2024-06-29T19:49:09+02:00
+    - Modernize tes file extension
+    - Modernize pod
+    - Add sponsor link and button
+    - Add test button for each OS
+    - Update copyright year
+
 0.0.5  2021-09-10T11:50:44+02:00
     - Change file extension to .rakumod
     - Migrate to zef ecosystem
