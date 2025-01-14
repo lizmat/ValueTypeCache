@@ -1,4 +1,4 @@
-[![Actions Status](https://github.com/lizmat/ValueTypeCache/actions/workflows/ubuntu.yml/badge.svg)](https://github.com/lizmat/ValueTypeCache/actions) [![Actions Status](https://github.com/lizmat/ValueTypeCache/actions/workflows/macos.yml/badge.svg)](https://github.com/lizmat/ValueTypeCache/actions) [![Actions Status](https://github.com/lizmat/ValueTypeCache/actions/workflows/windows.yml/badge.svg)](https://github.com/lizmat/ValueTypeCache/actions)
+[![Actions Status](https://github.com/lizmat/ValueTypeCache/actions/workflows/linux.yml/badge.svg)](https://github.com/lizmat/ValueTypeCache/actions) [![Actions Status](https://github.com/lizmat/ValueTypeCache/actions/workflows/macos.yml/badge.svg)](https://github.com/lizmat/ValueTypeCache/actions) [![Actions Status](https://github.com/lizmat/ValueTypeCache/actions/workflows/windows.yml/badge.svg)](https://github.com/lizmat/ValueTypeCache/actions)
 
 NAME
 ====
@@ -34,7 +34,7 @@ say $bag.elems;  # less than 1000
 DESCRIPTION
 ===========
 
-The ValueTypeCache role mixes the logic of creating a proper ValueType class **and** making sure that each unique ValueType only exists once in memory, into a class.
+The `ValueTypeCache` distribution provides a `ValueTypeCache` role that mixes the logic of creating a proper ValueType class **and** making sure that each unique ValueType only exists once in memory, into a single class.
 
 The role takes a `Callable` parameterization to indicate how a unique ID should be created from the parameters given (as a hash) with the call to the `new` method. You can also adapt the given hash making sure any default values are properly applied. If there's already an object created with the returned ID, then no new object will be created but the one from the cache will be returned.
 
@@ -56,7 +56,7 @@ If you like this module, or what I’m doing more generally, committing to a [sm
 COPYRIGHT AND LICENSE
 =====================
 
-Copyright 2020, 2021, 2024 Elizabeth Mattijsen
+Copyright 2020, 2021, 2024, 2025 Elizabeth Mattijsen
 
 This library is free software; you can redistribute it and/or modify it under the Artistic License 2.0.
 

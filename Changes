@@ -1,6 +1,8 @@
 Revision history for ValueTypeCache
 
 {{$NEXT}}
+    - Fix CI badge for linux
+    - Update copyright year
 
 0.0.6  2024-06-29T19:49:09+02:00
     - Modernize tes file extension
