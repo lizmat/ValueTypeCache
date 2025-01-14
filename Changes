@@ -1,6 +1,8 @@
 Revision history for ValueTypeCache
 
 {{$NEXT}}
+
+0.0.7  2025-01-14T15:51:44+01:00
     - Fix CI badge for linux
     - Update copyright year
 
